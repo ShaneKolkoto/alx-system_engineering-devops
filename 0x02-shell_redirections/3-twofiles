@@ -1,2 +1,3 @@
 #!/bin/bash
+echo ls
 cat etc/passwd etc/hosts
