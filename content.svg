@@ -401,7 +401,7 @@ display: none;
 } */
 }
 			</style>
-			<body>
+<!-- 			<body> -->
 				<div class="grid-container">
 <div id="top" class="main">
 <h1>What is "the Shell"?</h1>
@@ -513,7 +513,7 @@ configuration tools for your window manager.</p>
 
 </div><!-- main -->
 </div><!-- grid-container -->
-			</body>
+<!-- 			</body> -->
 		</div>
 	</foreignObject>
 </svg>
