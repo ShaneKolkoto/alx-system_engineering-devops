@@ -1,0 +1,517 @@
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+	<foreignObject width="100%" height="100%">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<style>
+				@media all {
+a:link {
+color: #005580;
+}
+
+a:visited {
+color: #002740;
+}
+
+a:hover {
+background-color: red;
+color: white;
+}
+
+body {
+background: #005580;
+color: black;
+font-family: verdana, arial, helvetica, sans-serif;
+font-size: 14pt;
+font-style: normal;
+font-weight: normal;
+padding: 10px 10px 10px 10px;
+}
+
+.cmd {
+/* Commands typed at the prompt by the user */
+background: transparent;
+color: white;
+font-size: 100%;
+font-weight: bold;
+}
+
+code {
+/* Variables that appear in the text */
+font-family: lucidatypewriter, monospace, courier;
+font-size: 100%;
+font-style: normal;
+font-weight: normal;
+}
+
+.codeexample {
+/* Coding example */
+background-color: #E0E0E0;
+font-family: lucidatypewriter, monospace, courier;
+overflow-x: auto;
+padding: 0.5em;
+white-space: pre;
+}
+
+.colorblock-red {
+background-color: red;
+grid-column: 1;
+grid-row: 1;
+}
+
+.colorblock-white {
+background-color: white;
+grid-column: 1;
+grid-row: 2;
+}
+
+.display {
+/* Terminal display */
+background-color: #000000;
+color: #00FF00;
+font-family: lucidatypewriter, monospace, courier;
+overflow-x: auto;
+padding: 0.5em;
+white-space: pre;
+}
+
+.fineprint {
+font-size: 80%;
+text-align: left;
+}
+
+.footer {
+float: left;
+font-size: 80%
+}
+
+.grid-container {
+background-color: white;
+padding: 10px 10px 10px 10px;
+}
+
+h1 {
+font-size: 200%;
+font-style: normal;
+font-weight: normal;
+text-align: left;
+}
+
+h2 {
+font-size: 150%;
+font-style: normal;
+font-weight: normal;
+text-align: left;
+}
+
+h3 {
+font-size: 120%;
+font-style: normal;
+font-weight: bold;
+text-align: left;
+}
+
+h4 {
+font-size: 110%;
+font-style: normal;
+font-weight: bold;
+text-align: left;
+}
+
+.homebutton {
+display: inline;
+}
+
+hr {
+border: solid 1px black;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+.main {
+grid-column: 2;
+grid-row: 2;
+padding: 10px 10px 10px 10px;
+}
+
+.narrow {
+font-size: 80%;
+}
+
+.navbar {
+/* Main navigation bar - desktop */
+padding: 3em 0em 1em 0em;
+}
+
+.navbar2 {
+/* Main navigation bar - phone, tablet */
+padding: 0em 0em 1em 0em;
+}
+
+.pagenav {
+font-size: 90%;
+padding: 0.5em;
+text-align: right;
+}
+
+pre {
+background-color: #eee;
+display: block;
+font-family: lucidatypewriter, monospace, courier;
+margin: 0px 0px;
+overflow-x: auto;
+padding: 1em;
+}
+
+pre.bold {
+font-weight: bold;
+}
+
+.sidebar {
+/* Regular sidebar */
+background-color: #E0E0E0;
+padding: 1em;
+}
+
+table {
+border-collapse: collapse;
+caption-side: bottom;
+}
+
+table,
+th,
+td {
+border: 1px solid black;
+}
+
+th,
+td {
+padding: 10px;
+text-align: left;
+vertical-align: top;
+}
+
+tr:hover {
+background-color: #f5f5f5;
+}
+
+.title-img {
+grid-column: 2;
+grid-row: 1;
+padding: 65px 5px 25px 5px;
+}
+
+.user {
+/* User commands that appear in the text */
+font-size: 100%;
+font-weight: bold;
+}
+
+.warning {
+/* Warning sidebar */
+border: 1px solid black;
+color: #FF0000;
+padding: 1em;
+}
+
+/* Styles taken from pandoc for source code highlighting */
+
+table.sourceCode,
+tr.sourceCode,
+td.lineNumbers,
+td.sourceCode {
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+border: none;
+}
+
+table.sourceCode {
+max-width: 80%;
+}
+
+td.lineNumbers {
+text-align: right;
+padding-right: 4px;
+padding-left: 4px;
+color: #aaaaaa;
+border-right: 1px solid #aaaaaa;
+}
+
+td.sourceCode {
+padding-left: 5px;
+}
+
+code>span.kw {
+color: #007020;
+font-weight: bold;
+}
+
+code>span.dt {
+color: #902000;
+}
+
+code>span.dv {
+color: #40a070;
+}
+
+code>span.bn {
+color: #40a070;
+}
+
+code>span.fl {
+color: #40a070;
+}
+
+code>span.ch {
+color: #4070a0;
+}
+
+code>span.st {
+color: #4070a0;
+}
+
+code>span.co {
+color: #60a0b0;
+font-style: italic;
+}
+
+code>span.ot {
+color: #007020;
+}
+
+code>span.al {
+color: #ff0000;
+font-weight: bold;
+}
+
+code>span.fu {
+color: #06287e;
+}
+
+code>span.er {
+color: #ff0000;
+font-weight: bold;
+}
+}
+
+@media (max-width:320px) {
+/* smartphones, iPhone, portrait 480x320 phones */
+}
+
+@media (max-width:481px) {
+
+/* portrait e-readers, smaller tablets @ 600 or @ 640 wide. */
+.title-img {
+padding: 25px 10px 15px 10px;
+}
+}
+
+@media (max-width:930px) {
+body {
+border-style: none;
+font-size: 12pt;
+padding: 5px 5px 5px 5px;
+}
+
+.colorblock-red {
+display: none;
+}
+
+.colorblock-white {
+display: none;
+}
+
+.grid-container {
+grid-template-columns: 0% 100%;
+grid-gap: 0px;
+}
+
+h1 {
+font-size: 150%;
+font-weight: normal;
+}
+
+h2 {
+font-size: 125%;
+font-weight: normal;
+}
+
+h3 {
+font-size: 110%;
+font-weight: bold;
+}
+
+h4 {
+font-size: 100%;
+font-weight: bold;
+}
+
+.navbar {
+display: none;
+}
+}
+
+@media (min-width:931px) {
+
+/* portrait tablets, landscape 800x480 or 854x480 phones */
+.homebutton {
+display: none;
+}
+
+.navbar2 {
+display: none;
+}
+}
+
+@media (max-width:961px) {
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (max-width:1025px) {
+/* big landscape tablets, laptops, and desktops */
+}
+
+@media (max-width:1281px) {
+/* hi-res laptops and desktops */
+}
+
+@media print {
+body {
+background: white;
+}
+
+.grid-container {
+grid-template-columns: 0% 100%;
+grid-gap: 0px;
+}
+
+.navbar,
+.navbar2 {
+display: none;
+}
+
+.pagenav {
+display: none;
+}
+
+/*  .title-img {
+display: none;
+} */
+}
+			</style>
+			<div class="grid-container">
+<div id="top" class="main">
+<h1>What is "the Shell"?</h1>
+
+<p>Simply put, the shell is a program that takes commands from the keyboard
+and gives them to the operating system to perform. In the old days, it was
+the only user interface available on a Unix-like system such as Linux.
+Nowadays, we have <i>graphical user interfaces (GUIs)</i> in addition to
+<i>command line interfaces (CLIs)</i> such as the shell.
+</p>
+
+<p>On most Linux systems a program called <code class="user"><a href=
+"lc3_man_pages/bash1.html">bash</a></code> (which stands for Bourne Again
+SHell, an enhanced version of the original Unix shell program, <code class="user">sh</code>, written by
+Steve Bourne) acts as the shell program. Besides
+<code class="user">bash</code>, there are other shell programs available for
+Linux systems. These include: <code class="user">ksh</code>, <code class="user">tcsh</code> and <code
+class="user">zsh</code>.
+</p>
+
+<h2>What's a "Terminal?"</h2>
+
+<p>It's a program called a <i>terminal emulator</i>. This is a program that
+opens a window and lets you interact with the shell. There are a bunch of
+different terminal emulators we can use. Some Linux distributions install
+several. These might include <code class="user">gnome-terminal</code>, <code
+class="user">konsole</code>, <code class="user">xterm</code>, <code class="user">rxvt</code>, <code
+class="user">kvt</code>, <code class="user">nxterm</code>, and <code class="user">eterm</code>.</p>
+
+<h2>Starting a Terminal</h2>
+
+<p>Window managers usually have a way to launch a terminal from the menu.
+Look through the list of programs to see if anything looks like a terminal
+emulator. While there are a number of different terminal emulators, they all
+do the same thing. They give us access to a shell session. You will probably
+develop a preference for one, based on the different bells and whistles
+it provides.</p>
+
+<h2>Testing the Keyboard</h2>
+
+<p>OK, let's try some typing. Bring up a terminal window. The first thing we
+should see is a <i>shell prompt</i> that contains our user name and the name
+of the machine followed by a dollar sign. Something like this:</p>
+
+<div class="display">[me@linuxbox me]$</div>
+
+<p>Excellent! Now type some nonsense characters and
+press the enter key.</p>
+
+<div class="display">[me@linuxbox me]$ <code class="cmd">kdkjflajfks</code></div>
+
+<p>If all went well, we should have gotten an error message complaining that
+it cannot understand the command:</p>
+
+<div class="display">[me@linuxbox me]$ <code class="cmd">kdkjflajfks</code>
+bash: kdkjflajfks: command not found</div>
+
+<p>Wonderful! Now press the up-arrow key. Watch how our previous command
+"kdkjflajfks" returns. Yes, we have <i>command history</i>. Press the
+down-arrow and we get the blank line again.</p>
+
+<p>Recall the "kdkjflajfks" command using the up-arrow key if needed. Now,
+try the left and right-arrow keys. We can position the text cursor anywhere
+in the command line. This allows us to easily correct mistakes.</p>
+
+<div class="warning">
+<h2>You're not operating as root, are you?</h2>
+
+<p>If the last character of your shell prompt is # rather than $, you are
+operating as the <i>superuser</i>. This means that you have administrative
+privileges. This can be dangerous, since you are able to delete or overwrite
+any file on the system. Unless you absolutely need administrative privileges,
+do not operate as the superuser.</p>
+</div>
+
+<h2>Using the Mouse</h2>
+
+<p>Even though the shell is a command line interface, the mouse is still
+handy.</p>
+
+<p>Besides using the mouse to scroll the contents of the terminal window, we
+can can use it to copy text. Drag the mouse over some text (for example,
+"kdkjflajfks" right here on the browser window) while holding down the left
+button. The text should highlight. Release the left button and move the mouse
+pointer to the terminal window and press the middle mouse button
+(alternately, press both the left and right buttons at the same time when
+working on a touch pad). The text we highlighted in the browser window
+should be copied into the command line.</p>
+
+<div class="sidebar">
+<h2>A few words about focus...</h2>
+
+<p>When you installed your Linux system and its window manager (most likely
+Gnome or KDE), it was configured to behave in some ways like that legacy
+operating system.</p>
+
+<p>In particular, it probably has its <i>focus policy</i> set to "click to
+focus." This means that in order for a window to gain focus (become active)
+you have to click in the window. This is contrary to traditional X Window
+behavior. You should consider setting the focus policy to "focus follows
+mouse". You may find it strange at first that windows don't raise to the
+front when they get focus (you have to click on the window to do that), but
+you will enjoy being able to work on more than one window at once without
+having the active window obscuring the other. Try it and give it a fair
+trial; I think you will like it. You can find this setting in the
+configuration tools for your window manager.</p>
+</div>
+
+
+</div><!-- main -->
+</div><!-- grid-container -->
+		</div>
+	</foreignObject>
+</svg>
