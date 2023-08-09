@@ -1,43 +1,50 @@
 #!/usr/bin/python3
-"""Contains the count_words function"""
+""" Module for a function that queries the Reddit API recursively."""
+
+
 import requests
 
-def fetch_hot_articles(subreddit, after=None):
-    base_url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    params = {"limit": 100, "after": after}
-    headers = {"User-Agent": "Reddit Keyword Counter"}
 
-    response = requests.get(base_url, params=params, headers=headers)
+def count_words(subreddit, word_list, after='', word_dict={}):
+    """ A function that queries the Reddit API parses the title of
+    all hot articles, and prints a sorted count of given keywords
+    (case-insensitive, delimited by spaces.
+    Javascript should count as javascript, but java should not).
+    If no posts match or the subreddit is invalid, it prints nothing.
+    """
 
-    if response.status_code == 200:
-        data = response.json()
-        return data["data"]["children"], data["data"]["after"]
-    else:
-        return [], None
-
-def count_words_recursive(subreddit, word_list, counts=None, after=None):
-    if counts is None:
-        counts = {}
-
-    articles, next_page = fetch_hot_articles(subreddit, after)
-
-    for article in articles:
-        title = article["data"]["title"].lower()
+    if not word_dict:
         for word in word_list:
-            if word in counts:
-                counts[word] += title.count(word)
-            else:
-                counts[word] = title.count(word)
+            if word.lower() not in word_dict:
+                word_dict[word.lower()] = 0
 
-    if next_page:
-        count_words_recursive(subreddit, word_list, counts, next_page)
-    else:
-        sorted_counts = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
-        for word, count in sorted_counts:
-            print(f"{word}: {count}")
+    if after is None:
+        wordict = sorted(word_dict.items(), key=lambda x: (-x[1], x[0]))
+        for word in wordict:
+            if word[1]:
+                print('{}: {}'.format(word[0], word[1]))
+        return None
 
-def count_words(subreddit, word_list):
-    count_words_recursive(subreddit, [word.lower() for word in word_list])
+    url = 'https://www.reddit.com/r/{}/hot/.json'.format(subreddit)
+    header = {'user-agent': 'redquery'}
+    parameters = {'limit': 100, 'after': after}
+    response = requests.get(url, headers=header, params=parameters,
+                            allow_redirects=False)
 
-if __name__ == "__main__":
-    count_words("programming", ["react", "python", "java", "javascript", "scala", "no_results_for_this_one"])
+    if response.status_code != 200:
+        return None
+
+    try:
+        hot = response.json()['data']['children']
+        aft = response.json()['data']['after']
+        for post in hot:
+            title = post['data']['title']
+            lower = [word.lower() for word in title.split(' ')]
+
+            for word in word_dict.keys():
+                word_dict[word] += lower.count(word)
+
+    except Exception:
+        return None
+
+    count_words(subreddit, word_list, aft, word_dict)
