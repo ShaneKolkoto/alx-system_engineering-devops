@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # Connect to server 100.26.209.76 using the private key
+cat ~/.ssh/school
+~/.ssh/school.pub
 ssh ubuntu@100.26.209.76 -i ~/.ssh/school
